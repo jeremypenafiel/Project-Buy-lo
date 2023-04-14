@@ -1,0 +1,155 @@
+/*
+table of contents
+
+1. global styles
+2. navigation bar
+3. form
+
+*/
+
+/*
+=============
+1. global styles
+=============
+*/
+
+:root {
+    --fs-body: 1.125rem;
+    --color-main: rgb(30, 57, 50);
+    --color-accent: rgb(255, 198, 26);
+    --transition: 250ms ease-in-out;
+    --navbar-text-color-main: white;
+}
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-repeat: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.56;
+}
+
+/*
+=================
+2. navigation bar
+=================
+*/
+
+.navbar {
+    background-color: var(--color-main);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar h1 {
+    color: var(--navbar-text-color-main);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/*
+=============
+3. form
+=============
+*/
+
+
+.bg-img {
+
+    --bg-image: url(../img/shttefan-mtu6m_nLFQI-unsplash.jpg);
+    /*placeholder image*/
+
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    isolation: isolate;
+
+}
+
+.bg-img::after {
+
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    background-image: var(--bg-image);
+
+    filter: brightness(0.2);
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.form {
+    margin-top: 100px;
+    background-color: white;
+    width: 100%;
+}
+
+.form__headers {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+
+
+}
+
+.header__links {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+label,
+input {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+}
+
+button {
+    width: 49%;
+
+}
